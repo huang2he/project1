@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+  <!-- Coding by YeastarSupport | support.yeastar.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ECharts核心库 -->
+    <script src="echarts.js"></script>
+        
+    <!--jquery核心库-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        
+    <!--jquery.csv核心库-->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.3/jquery.csv.min.js"></script>    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/monitor.css">
+    
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    
+    <link rel="stylesheet" href="css/more charts.css">
+    <title>Realtime monitor tool</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+    
+  
+  <!----=====侧边栏===== -->
+  <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="logo">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Yeastar Support</span>
+                    
+                    <span class="profession">[Basic Plan]</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="developing...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="PBXmonitor.html" onclick="">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Homepage</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" onclick="sidebarBtnOne();">
+                            <i class='bx bx-line-chart icon' ></i>
+                            <span class="text nav-text">SIP Trunk Data</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" onclick="sidebarBtnTwo();">
+                            <i class='bx bx-line-chart icon'></i>
+                            <span class="text nav-text">CPU+Memory</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                      <a href="#" onclick="sidebarBtnThree();">
+                          <i class='bx bx-line-chart icon'></i>
+                          <span class="text nav-text">Linkus login</span>
+                      </a>
+                  </li>
+
+
+                  <li class="nav-link">
+                    <a href="#" onclick="sidebarBtnFour();">
+                        <i class='bx bx-line-chart icon'></i>
+                        <span class="text nav-text">Global CC</span>
+                    </a>
+                </li>
+
+
+
+                    <li class="nav-link">
+                      <a href="#" onclick="sidebarBtnFive();">
+                          <i class='bx bx-cart icon' ></i>
+                          <span class="text nav-text">More charts?</span>
+                      </a>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+
+
+
+
+
+                <li class="mode">
+                  
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+ 
+
+  <!----=====右侧页面===== -->
+
+    <div id="home" class="home">
+      
+       <div class="test">Check out tools developed by xxx ↓</div>
+
+         <section class="dashboard">
+
+ <!----=====tool#1===== -->
+ <div class="dash-content">
+  <div class="overview">
+      <div class="title">
+          
+          <span class="text">Tool #1</span>
+      </div>
+
+      <div class="boxes">
+          <div class="box box4">
+            <i class="uil uil-box"></i>
+            
+              <img src="/img/toolpic.svg" style="width: 200px;height:200px ;">
+            </span>
+            <span class="text">
+              
+                
+                  Recording Downloader
+                
+              
+            </span>
+
+              
+          </div>
+          <div class="box box4">
+            <i class="uil uil-box"></i>
+            
+            
+              <span class="text"><strong>Applicable Devices</strong></span>
+              <span class="text">S-Series(except S20)</span>
+              <span class="text">P-Series</span>
+              <span class="text"><strong>Features</strong></span>
+              <span class="text">- No need to install</span>
+              <span class="text">- One PBX only</span>
+              <span class="text">- Download specific time</span>
+              <span class="text">- Download at a fixed time</span>
+              
+              
+          </div>
+
+          <div class="box box4">
+            <i class="uil uil-box"></i>
+            
+            <a class="text" href="" target="_blank" >View details</a>
+              <span class="text">Price: </span>
+              
+          </div>
+
+          
+
+      </div>
+  </div>
+
+
+</div>
+ <!----=====tool#2===== -->
+ <div class="dash-content">
+  <div class="overview">
+      <div class="title">
+          
+          <span class="text">Tool #2</span>
+      </div>
+
+      <div class="boxes">
+          <div class="box box4">
+            <i class="uil uil-box"></i>
+            
+              <img src="/img/toolpic.svg" style="width: 200px;height:200px ;">
+            </span>
+            <span class="text">
+              
+                
+                  MySMS
+                
+              
+            </span>
+
+              
+          </div>
+          <div class="box box4">
+            <i class="uil uil-box"></i>
+            
+            
+              <span class="text"><strong>Applicable Devices</strong></span>
+              <span class="text">TGv2</span>
+              <span class="text"><strong>Features</strong></span>
+              <span class="text">- No need to install</span>
+              <span class="text">- Send SMS</span>
+              <span class="text">- Scheduled SMS</span>
+              <span class="text">- Export inbox/outbox</span>
+              
+              
+          </div>
+
+          <div class="box box4">
+            <i class="uil uil-box"></i>
+            
+            <a class="text" href="" target="_blank" >View details</a>
+              <span class="text">Price:free</span>
+              
+          </div>
+
+          
+
+      </div>
+  </div>
+
+
+</div>
+ <!----=====tool#3===== -->
+    <div class="dash-content">
+    <div class="overview">
+        <div class="title">
+            
+            <span class="text">Tool #3</span>
+        </div>
+
+        <div class="boxes">
+            <div class="box box4">
+              <i class="uil uil-box"></i>
+              
+                <img src="/img/toolpic.svg" style="width: 200px;height:200px ;">
+              </span>
+              <span class="text">
+                
+                  
+                    PBX Migration Tool
+                  
+                
+              </span>
+
+                
+            </div>
+            <div class="box box4">
+              <i class="uil uil-box"></i>
+              
+              <span class="text"><strong>Applicable Devices</strong></span>
+                <span class="text">3CX</span>
+                <span class="text">FreePBX</span>
+                <span class="text">Grandstream PBX</span>
+                <span class="text">Yeastar K2</span>
+                <span class="text">Yeastar P-Series</span>
+                <span class="text">Yeastar S-Series</span>
+                
+            </div>
+
+            <div class="box box4">
+              <i class="uil uil-box"></i>
+              
+              <a class="text" href="" target="_blank" >View details</a>
+                <span class="text">Price:free</span>
+                
+            </div>
+
+            
+
+        </div>
+    </div>
+
+
+</div>
+    </section>
+       
+
+    
+
+    </div>
+
+  
+
+
+<!--预读取同文件夹的csv文件+渲染echarts图表-->
+<!--图表1-->
+<script type="text/javascript">
+
+  /*读取csv数据*/
+  var row1 = [], line11 = [],line12= [],line13= []
+     function getFirstCsv() {
+         var csv_file_API = 'DailyCallCurrents.csv';//csv files
+         $.ajax({
+             url: "/csv/DailyCallCurrents.csv",
+             async: true,//异步传递数据的方式；
+             dataType: 'text',
+             success: function (data) {
+                 var dataCsv = $.csv.toObjects(data);//获取数组,并通过jQuery-CSV进行处理转化;
+                 console.log(dataCsv);//console查看数据是否获取
+                 /*处理CSV数据，并输入Echarts格式*/
+                 for (var i = 0; i < dataCsv.length; i++) {
+                     row1.push(dataCsv[i].Time);
+                     line11.push(dataCsv[i].Totalcalls);
+                     line12.push(dataCsv[i].ActiveCalls);
+                     line13.push(dataCsv[i].RingingCalls);
+                 }
+ 
+                 /*echarts图表渲染*/
+                 window.onresize = function() {myChart.resize();};
+                 
+                 var dom = document.getElementById("container1");
+               
+                 var myChart = echarts.init(dom);
+ 
+                 
+ 
+                 var option ;
+ 
+                 myChart.setOption(
+ 
+                   {
+                   dataZoom: [
+                       {
+                       show: true,
+                       realtime: true,
+                       start: 98,
+                       end: 100
+                     },
+     
+                     {
+                       type: 'inside',
+                       realtime: true,
+                       start: 65,
+                       end: 85
+                     }
+                   ],
+                   legend:{
+                     data:['total calls','active calls','ringing calls']
+                   },
+                   toolbox: {
+                    show:true,
+                     itemSize:20,
+                     feature: {
+                       dataZoom:{
+                         yAxisIndex:'none'
+                       },
+                       dataView:{
+                        readOnly:false
+
+                       },
+                       restore:{},  
+                       saveAsImage: {}
+               
+                     }
+                     },
+                     tooltip: {
+                         trigger: 'axis'
+                     },
+                     xAxis: {
+                         type: 'category',
+                         data: row1
+                     },
+                     yAxis: {
+                         
+                         type: 'value',
+                         
+                         axisLine:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                          axisTick:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                        
+                          axisLabel:{
+                          show:true,
+                          
+                          
+                        
+                          lineStyle:{
+                            color:'#6E7079'
+                          },
+                     }},
+                     series: [
+                       {
+                         data: line11,
+                         name:'total calls',
+                         type: 'line',
+                         
+                         smooth:true,
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line12,
+                         name:'active calls',
+                         type: 'line',
+                         smooth:true,
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line13,
+                         name:'ringing calls',
+                         type: 'line',
+                         smooth:true,
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     }
+                   ]
+                 }
+ 
+                 ) ;
+ 
+                 if (option && typeof option === "object") {
+                     myChart.setOption(option, true);
+                 }
+             },
+             error: function (e) {
+                 alert('cannot get data, connect Yeastar for help!');
+                 console.log("读取csv文件失败 ", e);
+             }
+         });
+     }
+ </script>
+
+<!--图表2-->
+<script type="text/javascript">
+
+  /*读取csv数据*/
+  var row2 = [], line21 = [],line22 = []
+     function getSecondCsv() {
+         var csv_file_API = 'CPU-Mem-20220812.csv';//csv路径
+         $.ajax({
+             url: "/csv/CPU-Mem-20220812.csv",
+             async: true,//异步传递数据的方式；
+             dataType: 'text',
+             success: function (data) {
+                 var dataCsv = $.csv.toObjects(data);//获取数组,并通过jQuery-CSV进行处理转化;
+                 console.log(dataCsv);//console查看数据是否获取
+                 /*处理CSV数据，并输入Echarts格式*/
+                 for (var i = 0; i < dataCsv.length; i++) {
+                     row2.push(dataCsv[i].Time);
+                     line21.push(dataCsv[i].CPUratio);
+                     line22.push(dataCsv[i].Memoryratio);
+                     
+                     
+                 }
+ 
+                 /*echarts图表渲染*/
+                 window.onresize = function() {myChart.resize();};
+                 
+                 var dom = document.getElementById("container2");
+               
+                 var myChart = echarts.init(dom);
+ 
+                 
+ 
+                 var option ;
+ 
+                 myChart.setOption(
+ 
+                   {
+
+                    
+
+
+                   dataZoom: [
+                       {
+                       show: true,
+                       realtime: true,
+                       start: 8,
+                       end: 92
+                     },
+     
+                     {
+                       type: 'inside',
+                       realtime: true,
+                       start: 65,
+                       end: 85
+                     }
+                   ],
+                   legend:{
+                     data:['CPU Ratio','Memory Ratio']
+                   },
+                   toolbox: {
+                     show:true,
+                     itemSize:20,
+                     feature: {
+                       dataZoom:{
+                         yAxisIndex:'none'
+                       },
+                       dataView:{
+                        readOnly:false
+
+                       },
+                       restore:{},  
+                       saveAsImage: {}
+               
+                     }
+                     },
+                     
+                    tooltip: {
+                         trigger: 'axis'
+                     },
+                     xAxis: {
+                         type: 'category',
+                         data: row2
+                     },
+                     yAxis: {
+                         type: 'value',
+                         max:1,
+                         axisLine:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                          axisTick:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                        
+                          axisLabel:{
+                          show:true,
+                          
+                          
+                        
+                          lineStyle:{
+                            color:'#6E7079'
+                          },
+
+                         },
+
+                     },
+
+                     series: [
+                       {
+                         data: line21,
+                         smooth:true,
+                         name:'CPU Ratio',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line22,
+                         smooth:true,
+                         name:'Memory Ratio',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     }
+
+                     
+                   ]
+                 }
+ 
+                 ) ;
+ 
+                 if (option && typeof option === "object") {
+                     myChart.setOption(option, true);
+                 }
+             },
+             error: function (e) {
+                 alert('cannot get data, connect Yeastar for help!');
+                 console.log("API call Failed: ", e);
+             }
+         });
+     }
+ </script>
+
+<!--图表3-->
+<script type="text/javascript">
+
+  /*读取csv数据*/
+  var row3 = [], line31 = [],line32 = [],line33 = [],line34 = []
+     function getThridCsv() {
+         var csv_file_API = 'ExtReg-LinkusLogin-20220812.csv';//csv路径
+         $.ajax({
+             url: "/csv/ExtReg-LinkusLogin-20220812.csv",
+             async: true,//异步传递数据的方式；
+             dataType: 'text',
+             success: function (data) {
+                 var dataCsv = $.csv.toObjects(data);//获取数组,并通过jQuery-CSV进行处理转化;
+                 console.log(dataCsv);//console查看数据是否获取
+                 /*处理CSV数据，并输入Echarts格式*/
+                 for (var i = 0; i < dataCsv.length; i++) {
+                     row3.push(dataCsv[i].Time);
+                     line31.push(dataCsv[i].ExtensoinRegistered);
+                     line32.push(dataCsv[i].LinkusWebLogged);
+                     line33.push(dataCsv[i].LinkusMobileLogged);
+                     line34.push(dataCsv[i].LinkusPCLogged);
+                     
+                     
+                 }
+ 
+                 /*echarts图表渲染*/
+                 window.onresize = function() {myChart.resize();};
+                 
+                 var dom = document.getElementById("container3");
+               
+                 var myChart = echarts.init(dom);
+ 
+                 
+ 
+                 var option ;
+ 
+                 myChart.setOption(
+ 
+                   {
+
+                    
+
+
+                   dataZoom: [
+                       {
+                       show: true,
+                       realtime: true,
+                       start: 8,
+                       end: 92
+                     },
+     
+                     {
+                       type: 'inside',
+                       realtime: true,
+                       start: 65,
+                       end: 85
+                     }
+                   ],
+
+                   /*
+                     line31.push(dataCsv[i].ExtensoinRegistered);
+                     line32.push(dataCsv[i].LinkusWebLogged);
+                     line33.push(dataCsv[i].LinkusMobileLogged);
+                     line34.push(dataCsv[i].LinkusPCLogged);
+                     */
+                   legend:{
+                     data:['Extension Registered','Linkus Web','Linkus Mobile','Linkus PC']
+                   },
+                   toolbox: {
+                     show:true,
+                     itemSize:20,
+                     feature: {
+                       dataZoom:{
+                         yAxisIndex:'none'
+                       },
+                       dataView:{
+                        readOnly:false
+
+                       },
+                       restore:{},  
+                       saveAsImage: {}
+               
+                     }
+                     },
+                     
+                    tooltip: {
+                         trigger: 'axis'
+                     },
+                     xAxis: {
+                         type: 'category',
+                         data: row3
+                     },
+                     yAxis: {
+                         type: 'value',
+                         
+                         axisLine:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                          axisTick:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                        
+                          axisLabel:{
+                          show:true,
+                          
+                          
+                        
+                          lineStyle:{
+                            color:'#6E7079'
+                          },
+
+                         },
+
+                     },
+
+                     series: [
+                       {
+                         data: line31,
+                         smooth:true,
+                         name:'Extension Registered',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line32,
+                         smooth:true,
+                         name:'Linkus Web',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line33,
+                         smooth:true,
+                         name:'Linkus Mobile',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line34,
+                         smooth:true,
+                         name:'Linkus PC',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     }
+
+                     
+                   ]
+                 }
+ 
+                 ) ;
+ 
+                 if (option && typeof option === "object") {
+                     myChart.setOption(option, true);
+                 }
+             },
+             error: function (e) {
+                 alert('cannot get data, connect Yeastar for help!');
+                 console.log("API call Failed: ", e);
+             }
+         });
+     }
+ </script>
+
+<!--图表4-->
+<script type="text/javascript">
+
+  /*读取csv数据*/
+  var row4 = [], line41 = [],line42 = []
+     function getFourthCsv() {
+         var csv_file_API = 'GlobalCC-20220812.csv';//csv路径
+         $.ajax({
+             url: "/csv/GlobalCC-20220812.csv",
+             async: true,//异步传递数据的方式；
+             dataType: 'text',
+             success: function (data) {
+                 var dataCsv = $.csv.toObjects(data);//获取数组,并通过jQuery-CSV进行处理转化;
+                 console.log(dataCsv);//console查看数据是否获取
+                 /*处理CSV数据，并输入Echarts格式*/
+                 for (var i = 0; i < dataCsv.length; i++) {
+                     row4.push(dataCsv[i].Time);
+                     line41.push(dataCsv[i].CurrentConcurrentCalls);
+                     line42.push(dataCsv[i].TotalConcurrentCalls);
+                                         
+                 }
+ 
+                 /*echarts图表渲染*/
+                 window.onresize = function() {myChart.resize();};
+                 
+                 var dom = document.getElementById("container4");
+               
+                 var myChart = echarts.init(dom);
+ 
+                 
+ 
+                 var option ;
+ 
+                 myChart.setOption(
+ 
+                   {
+
+                    
+
+
+                   dataZoom: [
+                       {
+                       show: true,
+                       realtime: true,
+                       start: 8,
+                       end: 92
+                     },
+     
+                     {
+                       type: 'inside',
+                       realtime: true,
+                       start: 65,
+                       end: 85
+                     }
+                   ],
+
+                   /*
+                     line31.push(dataCsv[i].ExtensoinRegistered);
+                     line32.push(dataCsv[i].LinkusWebLogged);
+                     line33.push(dataCsv[i].LinkusMobileLogged);
+                     line34.push(dataCsv[i].LinkusPCLogged);
+                     */
+                   legend:{
+                     data:['Current Concurrent Calls','Total Concurrent Calls']
+                   },
+                   toolbox: {
+                     show:true,
+                     itemSize:20,
+                     feature: {
+                       dataZoom:{
+                         yAxisIndex:'none'
+                       },
+                       dataView:{
+                        readOnly:false
+
+                       },
+                       restore:{},  
+                       saveAsImage: {}
+               
+                     }
+                     },
+                     
+                    tooltip: {
+                         trigger: 'axis'
+                     },
+                     xAxis: {
+                         type: 'category',
+                         data: row4
+                     },
+                     yAxis: {
+                         type: 'value',
+                         
+                         axisLine:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                          axisTick:{
+                          show:true,
+                          lineStyle:{
+                            color:'#6E7079'
+                          }
+                        },
+                        
+                          axisLabel:{
+                          show:true,
+                          
+                          
+                        
+                          lineStyle:{
+                            color:'#6E7079'
+                          },
+
+                         },
+
+                     },
+
+                     series: [
+                       {
+                         data: line41,
+                         smooth:true,
+                         name:'Current Concurrent Calls',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     },
+                     {
+                         data: line42,
+                         smooth:true,
+                         name:'Total Concurrent Calls',
+                         type: 'line',
+                         areaStyle: {},
+                         symbol:'roundRect',
+                         symbolSize:8,
+                         symbolBorderWidth:4,
+                         lineStyle:{
+                          width:3,
+                         },
+                         markPoint:{
+                           data:[
+                             {type:'max'},
+                             {type:'min'}
+                           ]
+                         }
+                     }
+
+                     
+                   ]
+                 }
+ 
+                 ) ;
+ 
+                 if (option && typeof option === "object") {
+                     myChart.setOption(option, true);
+                 }
+             },
+             error: function (e) {
+                 alert('cannot get data, connect Yeastar for help!');
+                 console.log("API call Failed: ", e);
+             }
+         });
+     }
+ </script>
+
+<!--侧边栏按钮绑定右侧页面刷新事件-->
+<script>
+function sidebarBtnOne(){
+  loadPage('chart1.html'),
+  setTimeout(getFirstCsv,1500)
+}
+
+function sidebarBtnTwo(){
+  loadPage('chart2.html'),
+  setTimeout(getSecondCsv,1500)
+}
+
+function sidebarBtnThree(){
+  loadPage('chart3.html'),
+  setTimeout(getThridCsv,1500)
+}
+
+function sidebarBtnFour(){
+  loadPage('chart4.html'),
+  setTimeout(getFourthCsv,1500)
+}
+
+function sidebarBtnFive(){
+  loadPage('more charts.html')
+  
+}
+
+</script>
+
+<!--右侧页面载入-->
+<script type="text/javascript">
+  /*jquery ajax 自定义方法*/
+function loadPage(url){
+  $.ajax({
+    
+    url:url,
+    cache:false,
+    async:true,
+    dataType:'html',
+    success:function(data){
+      document.getElementById("home").innerHTML = data;
+ 
+    },error:function(){
+      alert("loadPage failed！");
+
+
+    }
+
+  })
+}
+
+</script>
+
+<!--定义伸缩+定义dark mode+定义搜索栏-->
+<script>
+      const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+
+</html>
